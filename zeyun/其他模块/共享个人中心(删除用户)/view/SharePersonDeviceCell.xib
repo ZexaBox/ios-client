@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="68" id="KGk-i7-Jjw" customClass="SharePersonDeviceCell">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="68"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="338" height="67.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15512345678" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7et-oF-OYb">
+                        <rect key="frame" x="15" y="10" width="100.5" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.21960784310000001" green="0.23529411759999999" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:00:20:0A:8C:6D （mac地址）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLh-Fi-eDs">
+                        <rect key="frame" x="15" y="34.5" width="201.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOs-3L-dtf">
+                        <rect key="frame" x="288" y="14" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="H6M-BN-kBV"/>
+                            <constraint firstAttribute="height" constant="40" id="wIa-Rf-QzU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <state key="normal" title="✕">
+                            <color key="titleColor" red="0.57647058819999997" green="0.57647058819999997" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="del_action:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="sM4-cz-jBr"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="JOs-3L-dtf" secondAttribute="trailing" constant="10" id="KCU-Ni-T6D"/>
+                    <constraint firstItem="7et-oF-OYb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="OJB-P0-K0e"/>
+                    <constraint firstItem="7et-oF-OYb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Yvv-W8-B3Z"/>
+                    <constraint firstItem="oLh-Fi-eDs" firstAttribute="leading" secondItem="7et-oF-OYb" secondAttribute="leading" id="eIa-w3-SB0"/>
+                    <constraint firstItem="oLh-Fi-eDs" firstAttribute="top" secondItem="7et-oF-OYb" secondAttribute="bottom" constant="5" id="iDD-2p-UsK"/>
+                    <constraint firstItem="JOs-3L-dtf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ltp-Y7-eSp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="btnMain" destination="JOs-3L-dtf" id="X5b-8T-eg5"/>
+                <outlet property="labelMac" destination="oLh-Fi-eDs" id="uEq-NN-xOk"/>
+                <outlet property="labelPhone" destination="7et-oF-OYb" id="Tyt-I5-qfQ"/>
+            </connections>
+            <point key="canvasLocation" x="53" y="97"/>
+        </tableViewCell>
+    </objects>
+</document>

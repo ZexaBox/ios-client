@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PngFileDateViewController">
+            <connections>
+                <outlet property="btnCopy" destination="heP-AS-7TG" id="MOl-e0-qU7"/>
+                <outlet property="btnLongDay" destination="PBJ-eD-Knq" id="by8-Om-6B0"/>
+                <outlet property="btnOneDay" destination="uBW-0I-E3U" id="yYD-Rv-7Ej"/>
+                <outlet property="btnQQ" destination="GUz-89-Agh" id="BnU-HQ-JAe"/>
+                <outlet property="btnSevenDay" destination="O19-6H-2mK" id="fic-gx-PeE"/>
+                <outlet property="btnWX" destination="0Ai-4c-8Ub" id="tus-Vm-xOZ"/>
+                <outlet property="labelFileDate" destination="EGg-Jd-JFq" id="7va-IB-12c"/>
+                <outlet property="stackView" destination="jtq-9N-xK0" id="es6-11-yoe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTe-Wu-JPQ">
+                    <rect key="frame" x="40" y="243.5" width="295" height="180"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7kq-CC-xzc">
+                            <rect key="frame" x="0.0" y="-0.5" width="295" height="180"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文件有效期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGg-Jd-JFq">
+                            <rect key="frame" x="15" y="15" width="76.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.21960784310000001" green="0.23529411759999999" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="jtq-9N-xK0">
+                            <rect key="frame" x="10" y="53" width="275" height="20"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBW-0I-E3U">
+                                    <rect key="frame" x="0.0" y="0.0" width="65" height="20"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <state key="normal" title="一天过期" image="未选中">
+                                        <color key="titleColor" red="0.21960784310000001" green="0.23529411759999999" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <state key="selected" image="选中"/>
+                                    <connections>
+                                        <action selector="choose_action:" destination="-1" eventType="touchUpInside" id="Sv4-iF-pHr"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O19-6H-2mK">
+                                    <rect key="frame" x="105" y="0.0" width="65" height="20"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <state key="normal" title="七天过期" image="未选中">
+                                        <color key="titleColor" red="0.21960784310000001" green="0.23529411759999999" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <state key="selected" image="选中"/>
+                                    <connections>
+                                        <action selector="choose_action:" destination="-1" eventType="touchUpInside" id="v10-6M-tIL"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBJ-eD-Knq">
+                                    <rect key="frame" x="210" y="0.0" width="65" height="20"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <state key="normal" title="永久有效" image="未选中">
+                                        <color key="titleColor" red="0.21960784310000001" green="0.23529411759999999" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <state key="selected" image="选中"/>
+                                    <connections>
+                                        <action selector="choose_action:" destination="-1" eventType="touchUpInside" id="KTz-jB-qqK"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="vyg-4N-6FN"/>
+                            </constraints>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F2I-7C-O88">
+                            <rect key="frame" x="0.0" y="88" width="295" height="1"/>
+                            <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="bDj-Tp-uGp"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUz-89-Agh">
+                            <rect key="frame" x="5" y="139" width="116" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="zWR-gu-oRc"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="分享到QQ" image="QQ">
+                                <color key="titleColor" red="0.21960784310000001" green="0.23529411759999999" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="qq_action:" destination="-1" eventType="touchUpInside" id="Pyg-BU-YnZ"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0HT-bQ-3qj">
+                            <rect key="frame" x="5" y="99" width="285" height="30"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heP-AS-7TG">
+                                    <rect key="frame" x="0.0" y="0.0" width="142.5" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="yna-D6-d96"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <state key="normal" title="复制私密链接" image="复制文件夹">
+                                        <color key="titleColor" red="0.21960784310000001" green="0.23529411759999999" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="copylink_action:" destination="-1" eventType="touchUpInside" id="5aO-0C-sAl"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ai-4c-8Ub">
+                                    <rect key="frame" x="142.5" y="0.0" width="142.5" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="Tfi-Ky-u2c"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <state key="normal" title="分享到微信" image="微信">
+                                        <color key="titleColor" red="0.21960784310000001" green="0.23529411759999999" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="wx_action:" destination="-1" eventType="touchUpInside" id="fOE-hr-GQv"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="g4m-2N-25t"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="7kq-CC-xzc" secondAttribute="bottom" id="4pz-KU-MTJ"/>
+                        <constraint firstAttribute="trailing" secondItem="F2I-7C-O88" secondAttribute="trailing" id="6t3-0b-hjr"/>
+                        <constraint firstItem="F2I-7C-O88" firstAttribute="top" secondItem="jtq-9N-xK0" secondAttribute="bottom" constant="15" id="AEp-XI-od3"/>
+                        <constraint firstItem="0HT-bQ-3qj" firstAttribute="leading" secondItem="MTe-Wu-JPQ" secondAttribute="leading" constant="5" id="Gj7-ks-lNC"/>
+                        <constraint firstItem="7kq-CC-xzc" firstAttribute="leading" secondItem="MTe-Wu-JPQ" secondAttribute="leading" id="H7Z-Jf-6Je"/>
+                        <constraint firstItem="jtq-9N-xK0" firstAttribute="top" secondItem="EGg-Jd-JFq" secondAttribute="bottom" constant="20" id="LVi-fo-b7W"/>
+                        <constraint firstAttribute="trailing" secondItem="jtq-9N-xK0" secondAttribute="trailing" constant="10" id="PoO-GB-3KE"/>
+                        <constraint firstAttribute="trailing" secondItem="7kq-CC-xzc" secondAttribute="trailing" id="QH2-B1-xs1"/>
+                        <constraint firstItem="EGg-Jd-JFq" firstAttribute="leading" secondItem="MTe-Wu-JPQ" secondAttribute="leading" constant="15" id="cWP-1X-42K"/>
+                        <constraint firstItem="GUz-89-Agh" firstAttribute="leading" secondItem="heP-AS-7TG" secondAttribute="leading" id="d6A-gz-ktZ"/>
+                        <constraint firstItem="7kq-CC-xzc" firstAttribute="top" secondItem="MTe-Wu-JPQ" secondAttribute="top" id="djy-Ea-Jia"/>
+                        <constraint firstItem="EGg-Jd-JFq" firstAttribute="top" secondItem="MTe-Wu-JPQ" secondAttribute="top" constant="15" id="ggO-1h-Uo2"/>
+                        <constraint firstItem="GUz-89-Agh" firstAttribute="top" secondItem="0HT-bQ-3qj" secondAttribute="bottom" constant="10" id="hRt-7a-9aR"/>
+                        <constraint firstItem="0HT-bQ-3qj" firstAttribute="top" secondItem="F2I-7C-O88" secondAttribute="bottom" constant="10" id="qAX-P5-stC"/>
+                        <constraint firstItem="jtq-9N-xK0" firstAttribute="leading" secondItem="MTe-Wu-JPQ" secondAttribute="leading" constant="10" id="sU6-at-MBm"/>
+                        <constraint firstAttribute="trailing" secondItem="0HT-bQ-3qj" secondAttribute="trailing" constant="5" id="spb-2l-7vD"/>
+                        <constraint firstItem="F2I-7C-O88" firstAttribute="leading" secondItem="MTe-Wu-JPQ" secondAttribute="leading" id="yQ0-WM-s4M"/>
+                        <constraint firstAttribute="height" constant="180" id="zut-Uc-0El"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="MTe-Wu-JPQ" secondAttribute="trailing" constant="40" id="2zX-bt-k7r"/>
+                <constraint firstItem="MTe-Wu-JPQ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="40" id="T4C-tp-bQZ"/>
+                <constraint firstItem="MTe-Wu-JPQ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="mCR-xG-g0G"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="33.5" y="153.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="QQ" width="60" height="60"/>
+        <image name="复制文件夹" width="60" height="60"/>
+        <image name="微信" width="30" height="30"/>
+        <image name="未选中" width="15" height="15"/>
+        <image name="选中" width="15" height="15"/>
+    </resources>
+</document>

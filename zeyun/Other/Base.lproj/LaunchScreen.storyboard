@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景" translatesAutoresizingMaskIntoConstraints="NO" id="zgg-gf-nwI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="安全存储" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQN-Hq-1MK">
+                                <rect key="frame" x="0.0" y="99" width="375" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数据随身携带多端并用" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JO-S8-dOh">
+                                <rect key="frame" x="9" y="144" width="357" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRj-v1-0xs">
+                                <rect key="frame" x="92" y="679" width="212" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sq7-I4-YDp"/>
+                                </constraints>
+                                <state key="normal" title="立即体验"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dRj-v1-0xs" firstAttribute="leading" secondItem="Vq9-mH-v9b" secondAttribute="leading" constant="92" id="6rL-7M-D2S"/>
+                            <constraint firstItem="Vq9-mH-v9b" firstAttribute="trailing" secondItem="dRj-v1-0xs" secondAttribute="trailing" constant="71" id="7Wd-uq-Mmx"/>
+                            <constraint firstItem="Vq9-mH-v9b" firstAttribute="trailing" secondItem="dQN-Hq-1MK" secondAttribute="trailing" id="8Qu-a9-Cpa"/>
+                            <constraint firstAttribute="bottom" secondItem="zgg-gf-nwI" secondAttribute="bottom" id="8ma-vX-AlV"/>
+                            <constraint firstItem="Vq9-mH-v9b" firstAttribute="bottom" secondItem="dRj-v1-0xs" secondAttribute="bottom" constant="49" id="97S-Pk-hMr"/>
+                            <constraint firstItem="3JO-S8-dOh" firstAttribute="leading" secondItem="Vq9-mH-v9b" secondAttribute="leading" constant="9" id="Alj-Pm-hV9"/>
+                            <constraint firstItem="3JO-S8-dOh" firstAttribute="top" secondItem="dQN-Hq-1MK" secondAttribute="bottom" constant="9" id="Cse-ci-bnk"/>
+                            <constraint firstItem="zgg-gf-nwI" firstAttribute="trailing" secondItem="Vq9-mH-v9b" secondAttribute="trailing" id="QxF-1F-ZdB"/>
+                            <constraint firstItem="dQN-Hq-1MK" firstAttribute="top" secondItem="Vq9-mH-v9b" secondAttribute="top" constant="55" id="eGD-DA-hIB"/>
+                            <constraint firstItem="dQN-Hq-1MK" firstAttribute="leading" secondItem="Vq9-mH-v9b" secondAttribute="leading" id="fEh-DP-5wa"/>
+                            <constraint firstItem="Vq9-mH-v9b" firstAttribute="trailing" secondItem="3JO-S8-dOh" secondAttribute="trailing" constant="9" id="gFb-tx-9a1"/>
+                            <constraint firstItem="zgg-gf-nwI" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="qgg-WG-Nft"/>
+                            <constraint firstItem="zgg-gf-nwI" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="rTd-qU-fnW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vq9-mH-v9b"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="背景" width="375" height="667"/>
+    </resources>
+</document>

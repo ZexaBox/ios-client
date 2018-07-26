@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PngCell">
+            <rect key="frame" x="0.0" y="0.0" width="231" height="149"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="231" height="149"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tgN-UV-uwq">
+                        <rect key="frame" x="0.0" y="0.0" width="231" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="r7X-mC-9eX"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2x-3n-2jc">
+                        <rect key="frame" x="0.0" y="109" width="221" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.21960784310000001" green="0.23529411759999999" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rb1-HS-tSH">
+                        <rect key="frame" x="206" y="75" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="VzN-N0-VTx"/>
+                            <constraint firstAttribute="height" constant="20" id="z7j-gw-VXT"/>
+                        </constraints>
+                        <state key="normal" image="未选中白"/>
+                        <state key="selected" image="选中"/>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="rb1-HS-tSH" firstAttribute="bottom" secondItem="tgN-UV-uwq" secondAttribute="bottom" constant="-5" id="1wS-YH-fg9"/>
+                <constraint firstItem="z2x-3n-2jc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7Ob-XR-qcH"/>
+                <constraint firstItem="tgN-UV-uwq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="C7U-Pj-LWd"/>
+                <constraint firstItem="z2x-3n-2jc" firstAttribute="top" secondItem="tgN-UV-uwq" secondAttribute="bottom" constant="9" id="F6e-4t-iwl"/>
+                <constraint firstItem="rb1-HS-tSH" firstAttribute="trailing" secondItem="tgN-UV-uwq" secondAttribute="trailing" constant="-5" id="Ma3-5y-d9Z"/>
+                <constraint firstItem="tgN-UV-uwq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VVh-Cz-q7K"/>
+                <constraint firstAttribute="trailing" secondItem="tgN-UV-uwq" secondAttribute="trailing" id="aC9-YO-8HP"/>
+                <constraint firstAttribute="trailing" secondItem="z2x-3n-2jc" secondAttribute="trailing" constant="10" id="rxB-vG-2vk"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="231" height="149"/>
+            <connections>
+                <outlet property="btnSelect" destination="rb1-HS-tSH" id="NHd-TH-hBm"/>
+                <outlet property="headImageView" destination="tgN-UV-uwq" id="Jvf-W9-tFl"/>
+                <outlet property="labelName" destination="z2x-3n-2jc" id="zNV-S7-0Qd"/>
+            </connections>
+            <point key="canvasLocation" x="124.5" y="167.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="未选中白" width="42" height="42"/>
+        <image name="选中" width="15" height="15"/>
+    </resources>
+</document>

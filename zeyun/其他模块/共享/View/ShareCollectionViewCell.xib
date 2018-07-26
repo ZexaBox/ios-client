@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ShareCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="281" height="143"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="281" height="143"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HJg-aV-yjm">
+                        <rect key="frame" x="0.0" y="0.0" width="281" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="281" id="PEL-sS-iff"/>
+                            <constraint firstAttribute="height" constant="100" id="hps-SR-J0J"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4or-74-zI5">
+                        <rect key="frame" x="0.0" y="109" width="281" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.21960784310000001" green="0.23529411759999999" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMQ-0j-HL3">
+                        <rect key="frame" x="256" y="75" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="f7u-yY-bRt"/>
+                            <constraint firstAttribute="height" constant="20" id="mYz-hh-ox6"/>
+                        </constraints>
+                        <state key="normal" image="未选中白"/>
+                        <state key="selected" image="选中"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="4or-74-zI5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6Nf-G6-LcR"/>
+                <constraint firstItem="oMQ-0j-HL3" firstAttribute="trailing" secondItem="HJg-aV-yjm" secondAttribute="trailing" constant="-5" id="PxJ-su-nS6"/>
+                <constraint firstItem="HJg-aV-yjm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="d7g-5J-3ub"/>
+                <constraint firstItem="HJg-aV-yjm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dln-hE-9WO"/>
+                <constraint firstAttribute="trailing" secondItem="4or-74-zI5" secondAttribute="trailing" id="kcx-73-hl6"/>
+                <constraint firstItem="oMQ-0j-HL3" firstAttribute="bottom" secondItem="HJg-aV-yjm" secondAttribute="bottom" constant="-5" id="sF3-xz-vu3"/>
+                <constraint firstItem="4or-74-zI5" firstAttribute="top" secondItem="HJg-aV-yjm" secondAttribute="bottom" constant="9" id="xSc-Oc-TQv"/>
+                <constraint firstAttribute="trailing" secondItem="HJg-aV-yjm" secondAttribute="trailing" id="yOG-oB-j6n"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="281" height="143"/>
+            <connections>
+                <outlet property="btnSelect" destination="oMQ-0j-HL3" id="uFd-Iw-wtt"/>
+                <outlet property="headImageView" destination="HJg-aV-yjm" id="EtU-it-gxv"/>
+                <outlet property="labelName" destination="4or-74-zI5" id="8rs-n3-4Z0"/>
+            </connections>
+            <point key="canvasLocation" x="149.5" y="142.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="未选中白" width="42" height="42"/>
+        <image name="选中" width="15" height="15"/>
+    </resources>
+</document>
