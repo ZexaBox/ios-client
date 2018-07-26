@@ -17,3 +17,6 @@ Want to know what the naughty boys are doing at home? No problem! ZEXABOX suppor
 Network speed is not good, transmission file is slow? No problem! ZEXABOX allows you to quickly send documents by face to face, so that you don't have to wait on sharing a moment with photo or video.
 
 ZEXA BOX!  It’s all here, all for you! The unprecedented relaxation time!
+
+1. Please download the ZexaBox from the App Store;
+2. Combined with the experience in ZexaBox, corresponding to the module in the reading code;
